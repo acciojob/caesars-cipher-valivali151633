@@ -35,19 +35,14 @@ function rot13(encodedStr) {
   let decodedArr = []; // Your Result goes here
   // Only change code below this line
 	
-	for(let i = 0 ; i<encodedStr ;  i++)
-		{
-			let char = encodedStr[i];
-			if(lookup.hasOwnProperty(char))
-			{
-				decodedArr.push(lookup[char])
-			}
-			else
-			{
-				decodedArr.push(char)
-			}
+	for(let i = 0; i < encodedStr.length; i++) {
+		let char = encodedStr[i];
+		if(lookup.hasOwnProperty(char)) {
+			decodedArr.push(lookup[char])
+		} else {
+			decodedArr.push(char)
 		}
-	
+	}
 
   return decodedArr.join(""); //return decodedArr
 }
